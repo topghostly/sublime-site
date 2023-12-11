@@ -15,6 +15,10 @@
   src: url(../src/assets/fonts/TT_Firs_Neue_Trial_Regular.ttf);
 }
 @font-face {
+  font-family: "TT-Firs-DemiBold";
+  src: url(../src/assets/fonts/TT_Firs_Neue_Trial_DemiBold.ttf);
+}
+@font-face {
   font-family: "TT-Firs-Light";
   src: url(../src/assets/fonts/TT_Firs_Neue_Trial_Light.ttf);
 }

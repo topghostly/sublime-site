@@ -70,10 +70,12 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 40% 59%;
   gap: 10px;
+  height: fit-content;
 
   .small-image-holder {
     display: grid;
     grid-template-rows: 70% 30%;
+    height: fit-content;
   }
 
   .circleHolder {
@@ -100,6 +102,7 @@ const Wrapper = styled.div`
 `;
 
 const LargeIMG = styled.div`
+  border-radius: 15px;
   position: relative;
   height: 72vh;
   background-color: red;
@@ -111,6 +114,7 @@ const LargeIMG = styled.div`
   transform: translateY(40px);
 `;
 const SmallIMG = styled.div`
+  border-radius: 15px;
   position: relative;
   height: 270px;
   background-color: red;

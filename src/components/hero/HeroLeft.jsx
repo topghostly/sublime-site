@@ -164,16 +164,17 @@ const Header = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   flex-direction: column;
 
   h1.main-head {
     width: 100%;
-    font-size: 60px;
+    font-size: 61px;
     font-family: "TT-Firs-Medium";
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     opacity: 0;
     transform: translateY(40px);
+    line-height: 69px;
   }
   p.head-para {
     width: 98%;
@@ -218,8 +219,8 @@ const Header = styled.div`
 const Works = styled.div`
   width: 99%;
   font-size: 13px;
-  margin-top: var(--medium-spacing);
-  position: absolute;
+  margin-top: var(--large-spacing);
+  position: relative;
   bottom: 0px;
 
   .holder {

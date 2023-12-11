@@ -14,10 +14,11 @@ function Hero() {
 }
 
 const Wrapper = styled.div`
-  padding: 0px var(--medium-spacing);
-  margin-top: var(--large-spacing);
+  padding: var(--medium-spacing);
+  margin: var(--large-spacing) 0px;
+  margin-bottom: var(--small-spacing);
   position: relative;
-  height: 80vh;
+  height: fit-content;
 
   display: grid;
   grid-template-columns: 46% 50%;
