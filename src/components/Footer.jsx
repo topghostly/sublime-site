@@ -1,83 +1,56 @@
-// Footer.js
 import React from "react";
 import styled from "styled-components";
+import Logo from "../assets/images/logo.png";
 
-const FooterContainer = styled.footer`
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
-
-const Section = styled.div`
-  text-align: center;
-  flex: 1;
-  margin: 10px 0;
-
-  @media (min-width: 768px) {
-    max-width: 30%; /* Adjust the percentage based on your design preference */
-  }
-`;
-
-const AddressSection = styled(Section)``;
-
-const NavigationSection = styled(Section)`
-  display: flex;
-  flex-direction: column;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    margin: 5px 0;
-  }
-`;
-
-const SocialSection = styled(Section)`
-  img {
-    width: 30px;
-    margin: 0 10px;
-  }
-`;
-
-const Footer = () => {
+function Footer() {
   return (
-    <FooterContainer>
-      <AddressSection>
-        <p>Your Company Name</p>
-        <p>123 Street, City, Country</p>
-      </AddressSection>
-
-      <NavigationSection>
-        <a href="/">Home</a>
-        <a href="/services">Services</a>
-        <a href="/about">About Us</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/contact">Contact</a>
-      </NavigationSection>
-
-      <SocialSection>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <img src="path/to/twitter-icon.png" alt="Twitter" />
-        </a>
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="path/to/facebook-icon.png" alt="Facebook" />
-        </a>
-        <a
-          href="mailto:your.email@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="path/to/gmail-icon.png" alt="Gmail" />
-        </a>
-      </SocialSection>
-    </FooterContainer>
+    <Wrapper>
+      <div className="logo-section">
+        <div className="holder">
+          {" "}
+          <img src={Logo} alt="logo" />
+          <p>
+            Suite 19b, 1st Floor, Block 2, Alausa Shopping Mall, Alausa, Ikeja,
+            Lagos
+          </p>
+        </div>
+      </div>
+      <div className="nav-section"></div>
+      <div className="social-section"></div>
+    </Wrapper>
   );
-};
+}
 
+const Wrapper = styled.div`
+  position: relative;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  height: 150px;
+  width: 100%;
+  margin: var(--medium-spacing) 0px;
+  margin-bottom: 0px;
+  font-size: 13px;
+
+  .logo-section {
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px;
+
+    .holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 80%;
+      margin: 0px auto;
+      gap: 20px;
+      img {
+        width: 100px;
+      }
+    }
+  }
+  .nav-section {
+  }
+  .social-section {
+  }
+`;
 export default Footer;

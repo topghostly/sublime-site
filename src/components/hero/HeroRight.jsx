@@ -41,19 +41,21 @@ function HeroRight() {
               borderRadius: "50%",
             }}
           >
-            {/* <svg
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              height="800px"
-              width="800px"
-              version="1.1"
-              id="Capa_1"
-              viewBox="0 0 47 47"
-              xml:space="preserve"
+              viewBox="0 0 24 24"
+              width="48"
+              height="48"
+              fill="none"
+              stroke="black"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              transform="rotate(-45)"
             >
-              <path d="M47,19c0-0.552-0.447-1-1-1s-1,0.448-1,1v24.586L1.707,0.293c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414  L43.586,45H19c-0.553,0-1,0.448-1,1s0.447,1,1,1h27c0.13,0,0.26-0.027,0.382-0.077c0.245-0.101,0.44-0.296,0.541-0.541  C46.974,46.26,47,46.13,47,46V19z" />
-            </svg> */}
+              <line x1="1" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </Drag>
         </div>
 
