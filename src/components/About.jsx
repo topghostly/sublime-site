@@ -3,7 +3,7 @@ import styled from "styled-components";
 function About() {
   return (
     <Wrapper>
-      <ImageHolder></ImageHolder>
+      {/* <ImageHolder></ImageHolder> */}
       <Content>
         <h1 className="head">About Us</h1>
         <p className="content">
@@ -27,9 +27,8 @@ function About() {
 const Wrapper = styled.div`
   padding: var(--large-spacing);
   position: relative;
-  grid-template-columns: 50% 50%;
-  display: grid;
-  background-color: #f8f8f8;
+  /* grid-template-columns: 50% 50%;
+  display: grid; */
   min-height: 80vh;
   place-content: center;
   border-radius: 20px;
@@ -40,9 +39,13 @@ const Content = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  display: flex;
-  flex-direction: column;
   gap: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  text-align: center;
+  margin: 0px auto;
+
   h1.head {
     width: 100%;
     font-size: 60px;

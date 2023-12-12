@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/images/logo-black.png";
+import Drag from "./Drag";
 
 function Navbar() {
   return (
@@ -8,11 +9,57 @@ function Navbar() {
       <img src={logo} alt="logo" className="company-logo" />
 
       <MidLinks>
-        <p>Home</p>
-        <p>About</p>
-        <p>Service</p>
-        <p>Portfolio</p>
-        <p>Contact</p>
+        <Drag
+          theStyle={{
+            width: "50px",
+            height: "20px",
+            position: "relative",
+            pointer: "all",
+          }}
+        >
+          <p>Home</p>
+        </Drag>
+
+        <Drag
+          theStyle={{
+            width: "50px",
+            height: "20px",
+            position: "relative",
+            pointer: "all",
+          }}
+        >
+          <p>About</p>
+        </Drag>
+        <Drag
+          theStyle={{
+            width: "50px",
+            height: "20px",
+            position: "relative",
+            pointer: "all",
+          }}
+        >
+          <p>Service</p>
+        </Drag>
+        <Drag
+          theStyle={{
+            width: "50px",
+            height: "20px",
+            position: "relative",
+            pointer: "all",
+          }}
+        >
+          <p>Portfolio</p>
+        </Drag>
+        <Drag
+          theStyle={{
+            width: "50px",
+            height: "20px",
+            position: "relative",
+            pointer: "all",
+          }}
+        >
+          <p>Contact</p>
+        </Drag>
       </MidLinks>
     </Wrapper>
   );
@@ -42,7 +89,7 @@ const MidLinks = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 
   p {
     font-family: "TT-Firs-Medium";

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import large from "../../assets/images/one.JPG";
 import small from "../../assets/images/6.JPEG";
 import Drag from "../Drag";
-import arrow from "../../assets/images/arrow.svg";
 import gsap from "gsap";
 
 function HeroRight() {
@@ -36,9 +35,13 @@ function HeroRight() {
         <div className="circleHolder">
           <Drag
             theStyle={{
+              width: "100px",
+              height: "100px",
               padding: "30px",
               position: "relative",
               borderRadius: "50%",
+              border: "solid 1px black",
+              pointer: "none",
             }}
           >
             <svg
@@ -47,7 +50,7 @@ function HeroRight() {
               width="48"
               height="48"
               fill="none"
-              stroke="black"
+              stroke="currentColor"
               stroke-width="1"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -92,13 +95,14 @@ const Wrapper = styled.div`
       background-color: var(--theme-color);
       transition: all 0.2s ease-in-out;
       border: none;
+
+      svg {
+        color: white;
+      }
     }
-
-    .drag-svg {
-      width: 25px;
-      transform: translateY(5px);
-
-      color: red;
+    svg {
+      color: black;
+      stroke-width: 0.5px;
     }
   }
 `;

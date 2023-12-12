@@ -49,7 +49,9 @@ function Drag({ children, theStyle }) {
       theStyle={theStyle}
       className="bodyY"
     >
-      <div className="children-div">{children}</div>
+      <div className="children-div" theStyle={theStyle}>
+        {children}
+      </div>
     </Body>
   );
 }
@@ -62,8 +64,8 @@ Drag.propTypes = {
 export default Drag;
 
 const Body = styled.div`
-  width: 100px;
-  height: 100px;
+  width: ${(props) => props.theStyle.width};
+  height: ${(props) => props.theStyle.height};
   display: grid;
   place-content: center;
   position: ${(props) => props.theStyle.position};
@@ -74,14 +76,14 @@ const Body = styled.div`
   border-radius: ${(props) => props.theStyle.borderRadius};
   /* padding: ${(props) => props.theStyle.padding}; */
   background-color: white;
-  border: solid 1px black;
+  border: ${(props) => props.theStyle.border};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   .children-div {
     width: fit-content;
     height: fit-content;
-    pointer-events: none;
+    pointer-events: ${(props) => props.theStyle.pointer};
     transition: all 0.2s ease-in-out;
   }
 `;

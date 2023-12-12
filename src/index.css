@@ -3,6 +3,10 @@
   src: url(../src/assets/fonts/Montserrat-Regular.ttf);
 }
 @font-face {
+  font-family: "Montsarrat-Medium";
+  src: url(../src/assets/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
   font-family: "Montsarrat-SemiBold";
   src: url(../src/assets/fonts/Montserrat-SemiBold.ttf);
 }
@@ -24,28 +28,31 @@
 }
 
 :root {
-  line-height: 1.5;
+  line-height: 2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  font-family: "Montsarrat-Regular";
+  font-family: "Montsarrat-Medium";
   font-size: 15px;
 
   --small-spacing: 30px;
   --medium-spacing: 50px;
   --large-spacing: 80px;
 
-  --theme-color: rgb(52, 52, 189);
+  --grey-color: rgb(177, 177, 177);
+  --theme-color: rgb(80, 80, 238);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+img {
+  pointer-events: none;
+}
 ::selection {
   background-color: var(--theme-color);
   color: white;

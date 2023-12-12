@@ -7,15 +7,20 @@ function Footer() {
     <Wrapper>
       <div className="logo-section">
         <div className="holder">
-          {" "}
           <img src={Logo} alt="logo" />
-          <p>
-            Suite 19b, 1st Floor, Block 2, Alausa Shopping Mall, Alausa, Ikeja,
-            Lagos
-          </p>
         </div>
       </div>
-      <div className="nav-section"></div>
+      <div className="nav-section-holder">
+        <div className="nav-section">
+          <p>&copy; SUBLIME LIMITED</p>
+          <p>PORTFOLIO</p>
+          <p>CONTACT</p>
+          <p>ABOUT</p>
+          <p>PROFILE</p>
+          <p>ENDING</p>
+        </div>
+        <p>NIGHT MODE</p>
+      </div>
       <div className="social-section"></div>
     </Wrapper>
   );
@@ -23,13 +28,10 @@ function Footer() {
 
 const Wrapper = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  height: 150px;
   width: 100%;
   margin: var(--medium-spacing) 0px;
-  margin-bottom: 0px;
-  font-size: 13px;
+  margin-bottom: var(--small-spacing);
+  font-size: 12px;
 
   .logo-section {
     width: 100%;
@@ -37,19 +39,22 @@ const Wrapper = styled.div`
     padding: 10px 5px;
 
     .holder {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      width: 80%;
-      margin: 0px auto;
-      gap: 20px;
       img {
         width: 100px;
       }
     }
   }
-  .nav-section {
+  .nav-section-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    .nav-section {
+      display: flex;
+      gap: 20px;
+      margin-top: var(--small-spacing);
+    }
   }
+
   .social-section {
   }
 `;

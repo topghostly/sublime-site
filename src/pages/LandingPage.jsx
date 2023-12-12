@@ -6,7 +6,8 @@ import About from "../components/About";
 import Mission from "../components/Mission";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
-// import Firstpage from "../components/Firstpage";
+import WorkHolder from "../components/WorkHolder";
+import MidGallery from "../components/MidGallery";
 
 function LandingPage() {
   return (
@@ -14,6 +15,8 @@ function LandingPage() {
       {/* <Firstpage /> */}
       <Navbar />
       <Hero />
+      <WorkHolder />
+      <MidGallery />
       <About />
       <Mission />
       <Testimonial />
