@@ -9,57 +9,67 @@ function Navbar() {
       <img src={logo} alt="logo" className="company-logo" />
 
       <MidLinks>
-        <Drag
-          theStyle={{
-            width: "50px",
-            height: "20px",
-            position: "relative",
-            pointer: "all",
-          }}
-        >
-          <p>Home</p>
-        </Drag>
-
-        <Drag
-          theStyle={{
-            width: "50px",
-            height: "20px",
-            position: "relative",
-            pointer: "all",
-          }}
-        >
-          <p>About</p>
-        </Drag>
-        <Drag
-          theStyle={{
-            width: "50px",
-            height: "20px",
-            position: "relative",
-            pointer: "all",
-          }}
-        >
-          <p>Service</p>
-        </Drag>
-        <Drag
-          theStyle={{
-            width: "50px",
-            height: "20px",
-            position: "relative",
-            pointer: "all",
-          }}
-        >
-          <p>Portfolio</p>
-        </Drag>
-        <Drag
-          theStyle={{
-            width: "50px",
-            height: "20px",
-            position: "relative",
-            pointer: "all",
-          }}
-        >
-          <p>Contact</p>
-        </Drag>
+        <div className="link-container">
+          <Drag
+            theStyle={{
+              width: "25px",
+              height: "10px",
+              position: "relative",
+              pointer: "all",
+            }}
+          >
+            <p>Home</p>
+          </Drag>
+        </div>
+        <div className="link-container">
+          <Drag
+            theStyle={{
+              width: "25px",
+              height: "10px",
+              position: "relative",
+              pointer: "all",
+            }}
+          >
+            <p>About</p>
+          </Drag>
+        </div>
+        <div className="link-container">
+          <Drag
+            theStyle={{
+              width: "25px",
+              height: "10px",
+              position: "relative",
+              pointer: "all",
+            }}
+          >
+            <p>Service</p>
+          </Drag>
+        </div>
+        <div className="link-container">
+          <Drag
+            theStyle={{
+              width: "25px",
+              height: "10px",
+              position: "relative",
+              pointer: "all",
+            }}
+          >
+            <p>Portfolio</p>
+          </Drag>
+        </div>
+        <div className="link-container">
+          {" "}
+          <Drag
+            theStyle={{
+              width: "25px",
+              height: "10px",
+              position: "relative",
+              pointer: "all",
+            }}
+          >
+            <p>Contact</p>
+          </Drag>
+        </div>
       </MidLinks>
     </Wrapper>
   );
@@ -89,8 +99,41 @@ const MidLinks = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
 
+  .link-container {
+    position: relative;
+    padding: 20px 30px;
+    overflow: hidden;
+
+    ::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      border-radius: 20px;
+      left: 0;
+      text-decoration: none;
+      background-color: var(--theme-color);
+      width: 25px;
+      height: 4px;
+      transform: translateX(-220%);
+      transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+  }
+
+  .link-container:hover {
+    ::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      border-radius: 20px;
+      left: 50%;
+      text-decoration: none;
+      background-color: var(--theme-color);
+      transform: translateX(-50%);
+      transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+  }
   p {
     font-family: "TT-Firs-Medium";
     font-size: 15px;

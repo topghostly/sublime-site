@@ -19,7 +19,12 @@ function Footer() {
           <p>PROFILE</p>
           <p>ENDING</p>
         </div>
-        <p>NIGHT MODE</p>
+        <div className="night-mode">
+          <div className="night">
+            <div className="slider"></div>
+          </div>
+          <p>NIGHT MODE</p>
+        </div>
       </div>
       <div className="social-section"></div>
     </Wrapper>
@@ -48,14 +53,41 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
     .nav-section {
       display: flex;
       gap: 20px;
-      margin-top: var(--small-spacing);
+      margin-top: 10px;
+    }
+
+    .night-mode {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .night {
+        width: 36px;
+        background-color: rgb(162, 162, 247);
+        height: 18px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 100px;
+        cursor: pointer;
+
+        .slider {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background-color: rgb(80, 80, 238);
+          transform: translateX(-5px);
+        }
+      }
     }
   }
 
   .social-section {
   }
 `;
+
 export default Footer;

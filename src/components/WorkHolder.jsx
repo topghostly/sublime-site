@@ -1,9 +1,40 @@
-import React from "react";
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
+import gsap from "gsap";
+import { useEffect } from "react";
 
-function WorkHolder() {
+function WorkHolder({ setShowPeakDisplay }) {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      const timeline = gsap.timeline({ defaults: { ease: "power4.inOut" } });
+
+      timeline
+        .to(".holder", {
+          duration: 1.4,
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+        })
+        .to(
+          ".line",
+          {
+            duration: 2,
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            opacity: 1,
+            y: 0,
+          },
+          "-=2"
+        );
+    }
+  });
+
   return (
-    <Works>
+    <Works ref={ref}>
       <div className="small-title">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +58,17 @@ function WorkHolder() {
         </svg>
         <p>Some Services</p>
       </div>
-      <div className="holder">
+      <div
+        className="holder"
+        onMouseEnter={() => {
+          console.log("Mouse is in");
+          setShowPeakDisplay(true);
+        }}
+        onMouseLeave={() => {
+          console.log("Mouse is out");
+          setShowPeakDisplay(false);
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -233,18 +274,43 @@ const Works = styled.div`
 
     svg {
       margin: auto 0px;
-      /* margin-left: auto; */
       color: #474747;
+      transition: all 0.2s ease-in-out;
     }
 
     .project-name {
       font-family: "Montsarrat-Medium";
       font-size: 40px;
       margin: 0xp;
+      transition: all 0.2s ease-in-out;
     }
     .project-title {
       font-size: 15px;
       margin: auto 0px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      .project-name {
+        font-family: "Montsarrat-Medium";
+        font-size: 40px;
+        margin: 0xp;
+        color: #8f8f8f;
+        transform: translateX(-10px);
+        transition: all 0.2s ease-in-out;
+      }
+      .project-title {
+        font-size: 15px;
+        margin: auto 0px;
+        color: #8f8f8f;
+        transform: translateX(10px);
+        transition: all 0.2s ease-in-out;
+      }
+      svg {
+        margin: auto 0px;
+        color: var(--theme-color);
+        transition: all 0.2s ease-in-out;
+      }
     }
   }
 

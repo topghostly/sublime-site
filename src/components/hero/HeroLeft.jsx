@@ -29,27 +29,6 @@ function HeroLeft() {
           opacity: 1,
         },
         "-=.8"
-      )
-      .to(
-        ".holder",
-        {
-          duration: 2,
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-          opacity: 1,
-          y: 0,
-          stagger: 0.3,
-        },
-        "-=.7"
-      )
-      .to(
-        ".line",
-        {
-          duration: 2,
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-          opacity: 1,
-          y: 0,
-        },
-        "-=1"
       );
   });
 
@@ -122,11 +101,18 @@ const Header = styled.div`
         transition: all 0.2s ease-in-out;
       }
     }
+    button:nth-child(2) {
+      &:hover {
+        color: white;
+        background-color: white;
+        border: solid 1px var(--theme-color);
+        color: var(--theme-color);
+      }
+    }
 
     button:nth-child(2) {
-      background-color: white;
-      color: black;
-      border: solid 1px black;
+      background-color: var(--theme-color);
+      color: color;
       transition: all 0.2s ease-in-out;
     }
   }
